@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 from payroll.exceptions import PayrollException
 from .logging import configure_logging
 from fastapi import FastAPI, Request, status
-from .api import api_router
+from .api import api_router, router
 
 from .database.core import engine
 from sqlalchemy.orm import sessionmaker
@@ -76,3 +76,4 @@ app.add_middleware(ExceptionMiddleware)
 
 # we add all API routes to the Web API framework
 app.include_router(api_router)
+app.include_router(router)

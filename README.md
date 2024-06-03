@@ -8,6 +8,10 @@ By default, the dependencies are managed with [Poetry](https://python-poetry.org
 
 You can install all the dependencies with:
 
+```
+pip install poetry
+```
+
 ```console
 poetry install
 ```
